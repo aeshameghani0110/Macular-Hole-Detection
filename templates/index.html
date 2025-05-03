@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/filepond.css') }}" />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/filepond-preview.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+        <title>Macular Hole Detection</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>Deep Learning-Based Segmentation Model</h1>
+                <h1>for Macular Hole Detection</h1>
+                <h2>Project by: Team 16</h2>
+            </div>
+            <div id="input">
+                <h2>Upload Image for Analysis</h2>
+                <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="image-upload" class="filepond" name="image" required />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='js/filepond-plugin-image-preview.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+        <!-- <script src="{{ url_for('static', filename='js/filepond.min.js') }}"></script> -->
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
